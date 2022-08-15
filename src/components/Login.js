@@ -22,6 +22,7 @@ const Login = () => {
     }
 
     //Handle Login API Integration here
+    //  https://www.loginradius.com/blog/engineering/guest-post/modern-login-signup-form-tailwindcss-react/
     const authenticateUser = () => {
         
     }
