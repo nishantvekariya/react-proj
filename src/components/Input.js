@@ -6,7 +6,6 @@ const InputComp = ({
     handleChange,
     value,
     labelText,
-    labelFor,
     id,
     name,
     type,
