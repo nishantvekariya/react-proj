@@ -24,7 +24,7 @@ const loginFields=[
 const signupFields=[
     {
         labelText:"Employee Name",
-        name:"username",
+        name:"empName",
         type:"text",
         isRequired:true,
         placeholder:"Employee Name"   
