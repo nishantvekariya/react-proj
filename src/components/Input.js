@@ -1,23 +1,25 @@
-const fixedInputClass = "rounded-md appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm"
+import { Input } from "antd";
 
-const Input = ({
+const fixedInputClass = "rounded-md appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:z-10 sm:text-sm"
+
+const InputComp = ({
     handleChange,
     value,
     labelText,
-    labelFor,
     id,
     name,
     type,
     isRequired = false,
     placeholder,
-    customClass
+    customClass,
+    maxLength
 }) => {
     return (
-        <div className="my-5">
-            <label htmlFor={labelFor} className="sr-only">
+        <div className="">
+            <p className="block mb-2 text-sm font-medium text-red-800">
                 {labelText}
-            </label>
-            <input
+            </p>
+            <Input
                 onChange={handleChange}
                 value={value}
                 id={id}
@@ -26,9 +28,10 @@ const Input = ({
                 required={isRequired}
                 className={fixedInputClass + customClass}
                 placeholder={placeholder}
+                maxLength={maxLength}
             />
         </div>
     )
 };
 
-export default Input;
+export default InputComp;

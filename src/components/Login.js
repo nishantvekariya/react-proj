@@ -2,8 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import { loginFields } from "../constants/formFields";
 import FormAction from "./FormAction";
-import FormExtra from "./FormExtra";
-import Input from "./Input";
+import InputComp from "./Input";
 
 const fields = loginFields;
 let fieldsState = {};
@@ -32,7 +31,7 @@ const Login = () => {
             <div className="-space-y-px">
                 {
                     fields.map(field =>
-                        <Input
+                        <InputComp
                             key={field.id}
                             handleChange={handleChange}
                             value={loginState[field.id]}
@@ -48,7 +47,6 @@ const Login = () => {
                     )
                 }
             </div>
-            <FormExtra />
             <FormAction handleSubmit={handleSubmit} text="Login" />
         </form>
     );
